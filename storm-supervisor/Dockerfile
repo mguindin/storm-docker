@@ -1,4 +1,4 @@
-FROM wurstmeister/storm:0.9.2
+FROM mguindin/storm:0.9.2
 MAINTAINER Wurstmeister
 
 EXPOSE 6700

@@ -1,9 +1,9 @@
 storm-docker
 ============
 
-Dockerfiles for building a storm cluster. Inspired by [https://github.com/ptgoetz/storm-vagrant](https://github.com/ptgoetz/storm-vagrant)
+jvm8 version of
+[Wurstmeister's storm docker](https://github.com/wurstmeister/storm-docker)
 
-The images are available directly from [https://index.docker.io](https://index.docker.io)
 
 ##Pre-Requisites
 
@@ -32,7 +32,7 @@ Add more supervisors:
 Take a look at fig.yml:
 
     ui:
-      image: wurstmeister/storm-ui:0.9.2
+      image: mguindin/storm-ui:0.9.2
 	      ports:
 	        - "49080:8080"
     
