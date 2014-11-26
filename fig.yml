@@ -3,7 +3,7 @@ zookeeper:
   ports: 
     - "49181:2181"
 nimbus:
-  image: mguindin/storm-nimbus:0.9.2
+  image: mguindin/storm-nimbus:0.9.3
   ports:
     - "49773:3773"
     - "49772:3772"
@@ -11,14 +11,14 @@ nimbus:
   links: 
     - zookeeper:zk
 supervisor:
-  image: mguindin/storm-supervisor:0.9.2
+  image: mguindin/storm-supervisor:0.9.3
   ports:
     - "8000"
   links: 
     - nimbus:nimbus
     - zookeeper:zk
 ui:
-  image: mguindin/storm-ui:0.9.2
+  image: mguindin/storm-ui:0.9.3
   ports:
     - "49080:8080"
   links: 

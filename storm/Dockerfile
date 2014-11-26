@@ -17,8 +17,8 @@ RUN (curl -s -k -L -C - -b "oraclelicense=accept-securebackup-cookie" http://dow
 ENV JAVA_HOME /jre1.8.0_20
 ENV PATH $PATH:$JAVA_HOME/bin
 
-RUN wget -q -N http://mirror.ox.ac.uk/sites/rsync.apache.org/incubator/storm/apache-storm-0.9.2-incubating/apache-storm-0.9.2-incubating.zip; unzip -o /apache-storm-0.9.2-incubating.zip -d /usr/share/; rm apache-storm-0.9.2-incubating.zip
-ENV STORM_HOME /usr/share/apache-storm-0.9.2-incubating
+RUN wget -q -N http://www.interior-dsgn.com/apache/storm/apache-storm-0.9.3/apache-storm-0.9.3.zip; unzip -o /apache-storm-0.9.3.zip -d /usr/share/; rm apache-storm-0.9.3.zip
+ENV STORM_HOME /usr/share/apache-storm-0.9.3
 RUN groupadd storm; useradd --gid storm --home-dir /home/storm --create-home --shell /bin/bash storm; chown -R storm:storm $STORM_HOME; mkdir /var/log/storm ; chown -R storm:storm /var/log/storm
 RUN ln -s $STORM_HOME/bin/storm /usr/bin/storm
 
