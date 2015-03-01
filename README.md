@@ -7,21 +7,21 @@ jvm8 version of
 
 ##Pre-Requisites
 
-- install fig [http://www.fig.sh/install.html](http://www.fig.sh/install.html)
+- install [docker-compose](http://docs.docker.com/compose/)
 
 ##Usage
 
 Start a cluser:
 
-- ```fig up```
+- ```docker-compose up```
 
 Destroy a cluster:
 
-- ```fig stop```
+- ```docker-compose stop```
 
 Add more supervisors:
 
-- ```fig scale supervisor=3```
+- ```docker-compose scale supervisor=3```
 
 ##Building
 
@@ -29,7 +29,7 @@ Add more supervisors:
 
 ##FAQ
 ### How can I access Storm UI from my host?
-Take a look at fig.yml:
+Take a look at docker-compose.yml:
 
     ui:
       image: mguindin/storm-ui:0.9.2
